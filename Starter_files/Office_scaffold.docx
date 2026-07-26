@@ -1,0 +1,36 @@
+Tea with Nessie — Office (Excel + Word) scaffold
+Use the starter files in ../starter_files/:
+•	nessie_guests.xlsx — data source (sheet Guests)
+•	tea_with_nessie_invitation.docx — letter with <<merge_field>> placeholders
+Goal
+Produce personalised invitations so each guest is invited to their venue (one of three Loch Ness tea spots), with the correct time, meeting point, cookie flavour, and postal details.
+Field map (Excel column → Word placeholder)
+Excel header	Word field
+courtesy_title	<<courtesy_title>>
+first_name	<<first_name>>
+last_name	<<last_name>>
+venue_name	<<venue_name>>
+venue_town	<<venue_town>>
+venue_promise	<<venue_promise>>
+meeting_point	<<meeting_point>>
+tea_date	<<tea_date>>
+tea_time	<<tea_time>>
+cookie_flavour	<<cookie_flavour>>
+rsvp_deadline	<<rsvp_deadline>>
+email	<<email>>
+street_address	<<street_address>>
+town	<<town>>
+postcode	<<postcode>>
+guest_id	<<guest_id>>
+
+Checklist
+1.	Open nessie_guests.xlsx and confirm the Guests sheet headers match the table above.
+2.	Open tea_with_nessie_invitation.docx and verify every <<field>> appears.
+3.	Run a mail merge (Word → Mailings) or manually prove the logic on 3 sample guests (one per venue) if your lab Word build blocks automated merge.
+4.	Save: your working Excel file; your Word template with << >> fields still visible; at least three finished sample letters (one per venue), or the merged output folder.
+5.	Write the 3-page plan (see INSTRUCTIONS.docx).
+Logic you must explain in the plan
+•	How a guest is assigned to a venue (look at the spreadsheet pattern).
+•	Why merge-field names must match column headers exactly.
+•	How you would catch a missing field or blank row before sending invitations.
+•	How the three venues differ (time, meeting point, “Nessie promise”).
