@@ -1,0 +1,13 @@
+Tea with Nessie
+An invitation to afternoon tea by the loch
+
+Dear <<courtesy_title>> <<first_name>> <<last_name>>,
+The mist is lifting over Loch Ness, and we would be delighted if you would join us for Tea with Nessie — a Highland afternoon of shortbread, strong tea, and a hopeful glance at the water.
+Your place is reserved at <<venue_name>> in <<venue_town>>, where you may <<venue_promise>>. Please arrive at <<meeting_point>> on <<tea_date>> at <<tea_time>>.
+Your complimentary treat: <<cookie_flavour>>. Kindly RSVP by <<rsvp_deadline>> to <<email>>, and we will keep a tartan napkin ready for you at <<street_address>>, <<town>> <<postcode>> correspondence if needed.
+Until then — keep your binoculars handy and your teacup warm.
+Warmly,
+The Tea with Nessie Committee
+Drumnadrochit · Loch Ness · Highlands
+
+Merge fields use <<double angle brackets>> so they stay visible in Word and work with a simple Python find-and-replace merge. Guest ID: <<guest_id>>.
