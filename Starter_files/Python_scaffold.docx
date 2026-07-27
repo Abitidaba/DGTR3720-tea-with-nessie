@@ -1,0 +1,11 @@
+Python scaffold — Tea with Nessie
+1.	From the assignment folder, install deps and generate starter files if needed.
+2.	Open mail_merge.py and read the TODOs.
+3.	Run: python scaffold_python/mail_merge.py
+4.	Check output/ for one invitation per guest.
+5.	Customise the Word template fields, re-run, and document your logic in the 3-page plan (use plan_outline.docx).
+Commands
+•	pip install -r requirements.txt
+•	python generate_data.py
+•	python scaffold_python/mail_merge.py
+Reading: https://automatetheboringstuff.com/ (Excel and Word chapters)
