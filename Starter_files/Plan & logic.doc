@@ -1,0 +1,79 @@
+Tea with Nessie mail merge plan & logic
+DGTR 3720 – Tea with Nessie mail
+Merge assignment
+Abiti Daba
+
+
+Introduction 
+
+My objective for this project was to create an automated mail merge system that produces personalized invitation letters for guests attending the Tea with Nessie marketing events. Instead of manually creating an invitation for every guest, the project combines information stored in an excel spreadsheet with a Microsoft word invitation template. A python program then merges fields inside the template the personalized invitation for each guest. 
+
+Mail merge is commonly used by businesses, schools, charities, and marketing organizations because it allows organizations to personalize communications while significantly reducing the amount of manual work required. Rather than editing dozens of hundreds of documents individually, one template can be combined with structured data sources to automatically generate personalized documents. 
+
+This automation improves efficiency by reducing repetitive efficiency by reducing repetitive manual work while ensuring that every guest receives accurate event information. The completed program successfully generated twenty-four personalized invitation letters, one for every guest listed in the spreadsheet. 
+
+
+Data Source 
+The guest information was store in the file Nessie. guests. Each row represents a single guest, while each column stores a specific piece off information required by the invitation template.
+The spreadsheet contains fields including: 
+
+•	GUEST ID
+•	Courtesy Title 
+•	First name 
+•	Last name 
+•	Email address 
+•	Street Address 
+•	Town 
+•	Postal code 
+•	Venue Town 
+•	Venue promise 
+•	Meeting Point 
+•	Event Date 
+•	Tea-time 
+•	Cookie Flavour 
+•	RSVP Deadline 
+
+Each guest has been assigned to one of three venues around loch ness. Because every guest record includes Venue-specific information, the program can automatically generate invitation that contains the correct location, meeting point and event details
+Using excel as the data source allows new guests to be added easily without modifying the python program. The script simply processes every row contained within the worksheet.
+
+Invitation template 
+
+The Template was created using Microsoft word using merge placeholders enclosed in double angle brackets. 
+Examples include. 
+
+•	<<Courtesy Title>> 
+•	<<First name >>
+•	<<Last name>> 
+•	<<Email address>> 
+•	<<Street Address>> 
+•	<<Town>> 
+•	<<Postal code>> 
+•	<<Venue Town>> 
+•	<<Venue promise>> 
+•	<<Meeting Point>> 
+•	<<Event Date>> 
+•	<<Teatime>> 
+•	<<Cookie Flavour>> 
+•	<<RSVP Deadline>>
+
+These placeholders act as a marker that the python script search for. During execution, each placeholder is replaced by the corresponding value from the excel spreadsheet. Using placeholders allows one template to generate many personalized invitations without editing the documents manually. 
+
+Python mail merge logic 
+The python program automates the mail merge process. The program first imports the required libraries, including python-docx for reading and writing word documents and openly for accessing excel workbooks. The script then loads the guest’s spreadsheet and reads every row from the guest’s worksheet. Each row is converted into a dictionary where the spreadsheet column headings become dictionary keys. This makes it easy to retrieve information such a guests first name, venue, or RSVP deadline. After the guest data has been loaded, the program opens the invitation template. It searches every paragraph for merge fields enclosed within double angle brackets. Whenever a merge field is found, the script replaces it with the matching value from guests record. Once all placeholders have been replaced, the completed invitation is saved into the output folder using a unique filename containing the guest ID and guest name. This process repeats automatically until every guest has received a personalized invitation. 
+This approach removes repetitive manual work while ensuring consistent formatting across every invitation.
+
+Validation and testing 
+Several validation checks were performed during development. 
+First, the spreadsheet headers were verified to ensure they matched the merge field names expected by the template. Matching field names are essential because the python program relies on identical names when replacing placeholders. Second, the simple invitation was reviewed after generation to confirm that guest name venues, meeting points, and RSVP information appeared correctly. The program was also tested by running the complete mail merge. During testing, the initial execution produced an error because the required python libraries (python-doc and openpyxl) were not installed on my computer. These packages were successfully installed using python package manager (pip), after which the program executed successfully.
+
+The successful execution produced twenty-four invitation documents inside the output folder. Each generated file contained personalized information for the correct guests and was saved using a unique filename. 
+No merge placeholders remained inside the completed documents, confirming that every required field had been replaced successfully. 
+
+Error prevention 
+Several measures help reduce errors during the mail merge process. Using unique guest IDs prevents duplicate filenames and allows every invitation to be identified easily. Because the program reads information directly from the spreadsheet, there is less chances to typing errors compared with manually creating invitations. 
+Before generating invitations, the spreadsheet should be reviewed to ensure required fields are not blank and that all merge field names exactly match those used in the word template. 
+If additional guests are added in the future, no changes to the python program are required if the spreadsheet structure remains consistent. 
+
+Conclusion 
+This project demonstrates how python can automate document creation using data stored in Microsoft excel and templates created in Microsoft word. The completed mail merge solution generated personalized invitation efficiently while maintaining consistent formatting and accurate guests’ information. Automating the process saves time, reduces manual effort, and minimize the possibility of human error. Because the solution separates the guest’s data from the invitation template, future mail merges can be completed simply by updating the spreadsheet with new guests’ information and running the program again. This design provides a reusable, scalable, and efficient solution for future tea with Nessie events. Overall, this project provides practical experience with business automation, data processing, and document generation. These are valuable skills that can be applied in many professional environment where personalized communication and efficient data management are required. 
+
